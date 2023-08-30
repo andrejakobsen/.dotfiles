@@ -1,0 +1,9 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/andrejakobsen/GitHub/datadrivet-infra-opendatastack
+startuppopupversion: 5
+customcommandshistory:
+- q
+- git checkout -b flake8-formatting
+hidecommandlog: false
+ignorewhitespaceindiffview: false
