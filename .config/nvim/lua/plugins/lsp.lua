@@ -1,0 +1,81 @@
+if true then return {} end
+-- local on_attach = function(client, bufnr)
+--   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+--   vim.keymap.set('n', '<space>cF', function() vim.lsp.buf.format { async = true } end,
+--     { desc = "Ruff All", remap = true, silent = true, buffer = bufnr })
+-- end
+--
+-- return
+-- {
+--     "neovim/nvim-lspconfig",
+--     dependencies = {
+--       "mason.nvim",
+--       "williamboman/mason-lspconfig.nvim",
+--       "astral-sh/ruff-lsp.nvim",
+--     },
+--
+--     init = function()
+--       require("lspconfig.util").on_attach(on_attach)
+--     end,
+-- return {
+--   {
+--     'neovim/nvim-lspconfig',
+--     config = function()
+--       local lsp = vim.lsp
+--       local keymap = vim.keymap
+--
+--       -- Available: "trace", "debug", "info", "warn", "error" or `vim.lsp.log_levels`
+--       require('vim.lsp.log').set_format_func(vim.inspect)
+--
+--       -- Set the default options for all LSP floating windows.
+--       --   - Default border according to `vim.g.border_style`
+--       --   - 'q' to quit with `nowait = true`
+--
+--       -- The main `on_attach` function to be called by each of the language server
+--       -- to setup the required keybindings and functionalities provided by other
+--       -- plugins.
+--       --
+--       -- This function needs to be passed to every language server. If a language
+--       -- server requires either more config or less, it should also be done in this
+--       -- function using the `filetype` conditions.
+--       ---@param client lsp.Client
+--       ---@param bufnr number
+--       local function on_attach(client, bufnr)
+--         -- Wrapper around `client.supports_method`.
+--         ---@param method string
+--         ---@return boolean
+--         local function supports_method(method)
+--           return client.supports_method(method, { bufnr = bufnr })
+--         end
+--
+--         if client.name == 'ruff_lsp' then
+--           -- Disable hover in favor of Pyright
+--           keymap.set("n", "<leader>cF", function() vim.lsp.buf.format { async = true } end, {
+--             buffer = bufnr,
+--             desc = "RUFFITUP"
+--           })
+--           client.server_capabilities.hoverProvider = false
+--         end
+--         --
+--         -- if client.name == 'rust_analyzer' then
+--         --   keymap.set('n', '<leader>rr', rust_analyzer.runnables, {
+--         --     buffer = bufnr,
+--         --     desc = 'LSP (rust-analyzer): Runnables',
+--         --   })
+--         --   keymap.set('n', '<leader>rl', rust_analyzer.execute_last_runnable, {
+--         --     buffer = bufnr,
+--         --     desc = 'LSP (rust-analyzer): Execute last runnable',
+--         --   })
+--         --   keymap.set('n', ';c', rust_analyzer.run_flycheck, {
+--         --     buffer = bufnr,
+--         --     desc = 'LSP (rust-analyzer): Run flycheck',
+--         --   })
+--         --   keymap.set('n', '<leader>rm', rust_analyzer.expand_macro_recursively, {
+--         --     buffer = bufnr,
+--         --     desc = 'LSP (rust-analyzer): Expand macro recursively',
+--         --   })
+--         -- end
+--       end
+--     end,
+--   },
+-- }
