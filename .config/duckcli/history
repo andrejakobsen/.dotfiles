@@ -1,0 +1,12 @@
+
+# 2023-02-27 18:51:25.497240
++select * from vehicles;
+
+# 2023-07-05 11:28:35.750087
++select * from read_csv("https://data.urbansharing.com/oslobysykkel.no/trips/v1/2023/07.csv")
+
+# 2023-07-05 11:29:29.099565
++select * from read_csv_auto('https://data.urbansharing.com/oslobysykkel.no/trips/v1/2023/07.csv')
+
+# 2023-07-05 11:31:01.530951
++exit
